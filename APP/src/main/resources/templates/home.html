@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalles de Persona</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        h1 {
+            text-align: center;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 20px;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+            max-width: 600px;
+            background-color: #fff;
+        }
+        th, td {
+            padding: 12px 15px;
+            text-align: left;
+        }
+        th {
+            background-color: #007BFF;
+            color: #fff;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+<h1>Detalles de Persona</h1>
+<table>
+    <tr>
+        <th>RUT</th>
+        <td th:text="${persona.rut}"></td>
+    </tr>
+    <tr>
+        <th>Nombre</th>
+        <td th:text="${persona.nombre}"></td>
+    </tr>
+    <tr>
+        <th>Apellido</th>
+        <td th:text="${persona.apellido}"></td>
+    </tr>
+    <tr>
+        <th>Teléfono</th>
+        <td th:text="${persona.telefono}"></td>
+    </tr>
+    <tr>
+        <th>Fecha de Ingreso</th>
+        <td th:text="${#dates.format(persona.fechaIngreso, 'dd-MM-yyyy')}"></td>
+    </tr>
+</table>
+</body>
+</html>
